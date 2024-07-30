@@ -1,0 +1,26 @@
+.editor,
+.preview {
+    width: 50%;
+    height: 100vh;
+    /* border: solid 5px #000; */
+    padding: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.editor {
+    background: #cbcbcb;
+    outline: none;
+    border: none;
+}
+
+.preview {
+    background-color: #d8d8d8;
+}
+
+.preview > .in-box > p {
+    width: 100%; /* or any percentage value or max-width that suits your layout */
+    box-sizing: border-box;
+    word-wrap: break-word; /* Ensures long words break to fit within the element */
+    overflow-wrap: break-word; /* Ensures long words break to fit within the element */
+}
