@@ -1,19 +1,22 @@
 import React, { useContext } from "react";
-import { TextContext } from "../App";
+import { PageContext, defaultText } from "../App";
 import "./styles.css";
 
 const Editor = () => {
-  const { setText } = useContext(TextContext);
+  const { setText } = useContext(PageContext);
 
   return (
-    <textarea
-      className="editor"
-      name="editor"
-      id="editor"
-      onChange={(e) => {
-        setText(e.target.value);
-      }}
-    />
+    <div className="editor">
+      <h1>Editor</h1>
+      <textarea
+        name="editor"
+        id="editor"
+        value={defaultText}
+        onChange={(e) => {
+          setText(e.target.value);
+        }}
+      />
+    </div>
   );
 };
 

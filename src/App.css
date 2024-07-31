@@ -1,7 +1,16 @@
 .App {
-    z-index: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 80px 0 0 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    .App {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 0 0 0;
+    }
 }
