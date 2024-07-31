@@ -1,8 +1,9 @@
 .App {
     display: flex;
     justify-content: center;
-    padding: 80px 0 0 0;
     overflow: hidden;
+    height: 100%;
+    padding: 80px 0;
 }
 
 @media screen and (max-width: 800px) {

@@ -1,3 +1,4 @@
+.footer,
 .toolbar {
     position: fixed;
     width: 100%;
@@ -15,7 +16,8 @@
 .toolbar>.input-set {
     display: flex;
     align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .toolbar>.page-set>button,
@@ -36,4 +38,18 @@
 .toolbar>.page-set>button:hover,
 .toolbar>.input-set>button:hover {
     background-color: #2800ac;
+}
+
+/* footer */
+
+.footer {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer a {
+    color: #000;
 }

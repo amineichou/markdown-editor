@@ -5,7 +5,7 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    min-height: 88vh;
+    min-height: 80vh;
     background-color: #fff;
 }
 
@@ -34,21 +34,20 @@
     height: 100%;
     min-height: 88vh;
     resize: none;
-    overflow: hidden;
 }
 
 .editor>textarea,
 .preview>.in-box {
-    overflow-y: scroll;
     box-sizing: border-box;
     padding: 20px;
+    overflow: scroll;
+    height: 100%;
+    border: 1px solid #ddd;
 }
 
 .preview>.in-box {
     width: 100%;
     height: 100%;
-    min-height: 88vh;
-    max-height: 88vh;
     box-sizing: border-box;
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -60,7 +59,6 @@
 }
 
 @media screen and (max-width: 800px) {
-
     .editor,
     .preview {
         width: 100%;

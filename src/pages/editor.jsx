@@ -3,7 +3,7 @@ import { PageContext, defaultText } from "../App";
 import "./styles.css";
 
 const Editor = () => {
-  const { setText } = useContext(PageContext);
+  const { text, setText } = useContext(PageContext);
 
   return (
     <div className="editor">
@@ -11,11 +11,13 @@ const Editor = () => {
       <textarea
         name="editor"
         id="editor"
-        value={defaultText}
+        defaultValue={defaultText}
+        value={text}
         onChange={(e) => {
           setText(e.target.value);
         }}
-      />
+      >
+      </textarea>
     </div>
   );
 };

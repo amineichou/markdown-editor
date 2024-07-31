@@ -2,15 +2,15 @@ import React, { useContext } from "react";
 import ReactMarkdown from "react-markdown";
 import { PageContext } from "../App";
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
-import { github } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { github, vs2015 } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import "./styles.css";
 
 const Preview = () => {
-  const { text } = useContext(PageContext);
+  const { theme, text } = useContext(PageContext);
   const {PreviewDisplay} = useContext(PageContext)
 
   const processNewlines = (text) => {
-    return text.replace(/\n/g, "  \n");
+    return text.replace(/\n/g, "\n");
   };
   // console.log(processNewlines(text));
   return (
@@ -24,8 +24,8 @@ const Preview = () => {
             const match = /language-(\w+)/.exec(className || "");
             return !inline && match ? (
               <SyntaxHighlighter
-                children={String(children).replace(/\n$/, "")}
-                style={github}
+                children={String(children)}
+                style={theme === "light" ? github : vs2015}
                 language={match[1]}
                 PreTag="div"
                 {...props}
